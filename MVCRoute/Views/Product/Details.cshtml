@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model MVCRoute.Models.Products
+
+<h2>Details</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Model.ProductName
+        </dt>
+        <dt>
+            @Model.UnitPrice
+        </dt>
+        <dt>
+            @Model.UnitsInStock
+        </dt>
+        <dt>
+            @Model.UnitsOnOrder
+        </dt>
+        <dt>
+            @Model.ReorderLevel
+        </dt>
+        <dt>
+            @Model.Discontinued
+        </dt>
+        <dt>
+            @Model.Category.CategoryName
+        </dt>
+        <dt>
+
+        </dt>
+    </dl>
+</div>

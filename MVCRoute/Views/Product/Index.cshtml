@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<MVCRoute.Models.Products>
+<h2>Index</h2>
+
+<p>
+    <a href="/Product/Create">Ürün ekle</a>
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Fiyatı</th>
+        <th>Stok Miktarı</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.UnitPrice</td>
+            <td>@item.UnitsInStock</td>
+            <td><a href="/@item.ProductName-p-@item.ProductID">Detaylar></a></td>
+        </tr>
+    }
+
+</table>
